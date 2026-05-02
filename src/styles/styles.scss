@@ -1,0 +1,23 @@
+// ============================================================
+// MAIN STYLESHEET — Entrypoint
+//
+// Registrar en angular.json:
+//   "styles": ["src/styles/styles.scss"]
+//
+// Orden importa: base primero, utilities al final (mayor especificidad)
+// ============================================================
+
+// 1. Variables CSS + reset + tipografía base
+@use 'base';
+
+// 2. Themes (dark mode, custom themes)
+@use 'themes';
+
+// 3. Layout (container, section wrappers)
+@use 'layout';
+
+// 4. Components (clases de UI reutilizables globales)
+@use 'components';
+
+// 5. Utilities — SIEMPRE al final para mayor especificidad
+@use 'utilities';

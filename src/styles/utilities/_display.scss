@@ -1,0 +1,65 @@
+// ============================================================
+// UTILITY — Display, Flex, Grid
+// ============================================================
+@use '../abstracts' as *;
+
+// ── Display ──
+.block        { display: block; }
+.inline-block { display: inline-block; }
+.inline       { display: inline; }
+.flex         { display: flex; }
+.inline-flex  { display: inline-flex; }
+.grid         { display: grid; }
+.hidden       { display: none; }
+
+// ── Flex direction ──
+.flex-row     { flex-direction: row; }
+.flex-col     { flex-direction: column; }
+.flex-wrap    { flex-wrap: wrap; }
+.flex-nowrap  { flex-wrap: nowrap; }
+
+// ── Flex grow/shrink ──
+.flex-1       { flex: 1 1 0%; }
+.flex-auto    { flex: 1 1 auto; }
+.flex-none    { flex: none; }
+.flex-grow    { flex-grow: 1; }
+.flex-shrink-0{ flex-shrink: 0; }
+
+// ── Justify content ──
+.justify-start   { justify-content: flex-start; }
+.justify-end     { justify-content: flex-end; }
+.justify-center  { justify-content: center; }
+.justify-between { justify-content: space-between; }
+.justify-around  { justify-content: space-around; }
+.justify-evenly  { justify-content: space-evenly; }
+
+// ── Align items ──
+.items-start    { align-items: flex-start; }
+.items-end      { align-items: flex-end; }
+.items-center   { align-items: center; }
+.items-baseline { align-items: baseline; }
+.items-stretch  { align-items: stretch; }
+
+// ── Align self ──
+.self-start  { align-self: flex-start; }
+.self-center { align-self: center; }
+.self-end    { align-self: flex-end; }
+.self-stretch{ align-self: stretch; }
+
+// ── Grid cols ──
+@for $i from 1 through 12 {
+  .grid-cols-#{$i} { grid-template-columns: repeat(#{$i}, minmax(0, 1fr)); }
+  .col-span-#{$i}  { grid-column: span #{$i} / span #{$i}; }
+}
+
+.col-span-full { grid-column: 1 / -1; }
+
+// ── Responsive display ──
+@each $bp-name, $bp-value in $breakpoints {
+  @media (min-width: $bp-value) {
+    .#{$bp-name}\:flex   { display: flex; }
+    .#{$bp-name}\:grid   { display: grid; }
+    .#{$bp-name}\:hidden { display: none; }
+    .#{$bp-name}\:block  { display: block; }
+  }
+}

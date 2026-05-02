@@ -1,0 +1,49 @@
+// ============================================================
+// FUNCTIONS — Helpers para acceder a los design tokens
+// ============================================================
+@use 'tokens' as t;
+
+/// Obtiene un color primitivo del mapa
+/// @param {String} $key - ej: 'primary-500'
+@function color($key) {
+  @if map-has-key(t.$color-primitives, $key) {
+    @return map-get(t.$color-primitives, $key);
+  }
+  @warn "Color '#{$key}' no existe en $color-primitives";
+  @return null;
+}
+
+/// Obtiene un valor de espaciado del mapa
+/// @param {String} $key - ej: '4' → 16px
+@function spacing($key) {
+  @if map-has-key(t.$spacing-scale, $key) {
+    @return map-get(t.$spacing-scale, $key);
+  }
+  @warn "Spacing '#{$key}' no existe en $spacing-scale";
+  @return null;
+}
+
+/// Obtiene un font-size
+@function font-size($key) {
+  @return map-get(t.$font-sizes, $key);
+}
+
+/// Obtiene un radio de borde
+@function radius($key) {
+  @return map-get(t.$radii, $key);
+}
+
+/// Obtiene una sombra
+@function shadow($key) {
+  @return map-get(t.$shadows, $key);
+}
+
+/// Obtiene un breakpoint
+@function bp($key) {
+  @return map-get(t.$breakpoints, $key);
+}
+
+/// Convierte px a rem
+@function rem($px) {
+  @return #{calc($px / 16)}rem;
+}

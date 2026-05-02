@@ -1,0 +1,76 @@
+// ============================================================
+// CSS CUSTOM PROPERTIES — Generadas desde design tokens
+// Disponibles globalmente como var(--color-primary-500), etc.
+// ============================================================
+@use '../abstracts' as *;
+
+:root {
+  // ── Colores primitivos ──
+  @each $key, $value in $color-primitives {
+    --color-#{$key}: #{$value};
+  }
+
+  // ── Semántica de color (light mode default) ──
+  --color-bg:             var(--color-neutral-0);
+  --color-bg-subtle:      var(--color-neutral-50);
+  --color-bg-muted:       var(--color-neutral-100);
+  --color-surface:        var(--color-neutral-0);
+  --color-surface-raised: var(--color-neutral-50);
+  --color-border:         var(--color-neutral-200);
+  --color-border-strong:  var(--color-neutral-300);
+  --color-text:           var(--color-neutral-900);
+  --color-text-muted:     var(--color-neutral-500);
+  --color-text-subtle:    var(--color-neutral-400);
+  --color-text-inverted:  var(--color-neutral-0);
+
+  --color-brand:          var(--color-primary-600);
+  --color-brand-hover:    var(--color-primary-700);
+  --color-brand-subtle:   var(--color-primary-50);
+  --color-brand-text:     var(--color-primary-700);
+
+  // ── Espaciado ──
+  @each $key, $value in $spacing-scale {
+    --space-#{$key}: #{$value};
+  }
+
+  // ── Tipografía ──
+  --font-sans:  #{map-get($font-families, 'sans')};
+  --font-serif: #{map-get($font-families, 'serif')};
+  --font-mono:  #{map-get($font-families, 'mono')};
+
+  @each $key, $value in $font-sizes {
+    --text-#{$key}: #{$value};
+  }
+
+  @each $key, $value in $font-weights {
+    --font-#{$key}: #{$value};
+  }
+
+  @each $key, $value in $line-heights {
+    --leading-#{$key}: #{$value};
+  }
+
+  // ── Radios ──
+  @each $key, $value in $radii {
+    --radius-#{$key}: #{$value};
+  }
+
+  // ── Sombras ──
+  @each $key, $value in $shadows {
+    --shadow-#{$key}: #{$value};
+  }
+
+  // ── Z-index ──
+  @each $key, $value in $z-index {
+    --z-#{$key}: #{$value};
+  }
+
+  // ── Transiciones ──
+  @each $key, $value in $transitions {
+    --duration-#{$key}: #{$value};
+  }
+
+  @each $key, $value in $easing {
+    --ease-#{$key}: #{$value};
+  }
+}
