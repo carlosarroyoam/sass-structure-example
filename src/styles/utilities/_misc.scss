@@ -1,70 +1,175 @@
-// ============================================================
-// UTILITY — Shadows, Position, Overflow, Cursor, etc.
-// ============================================================
+.shadow-none {
+  box-shadow: none;
+}
 
-// ── Sombras ──
-.shadow-none { box-shadow: none; }
-.shadow-sm   { box-shadow: var(--shadow-sm); }
-.shadow      { box-shadow: var(--shadow-base); }
-.shadow-md   { box-shadow: var(--shadow-md); }
-.shadow-lg   { box-shadow: var(--shadow-lg); }
-.shadow-xl   { box-shadow: var(--shadow-xl); }
-.shadow-2xl  { box-shadow: var(--shadow-2xl); }
+.shadow-sm {
+  box-shadow: var(--shadow-sm);
+}
 
-// ── Opacidad ──
-.opacity-0   { opacity: 0; }
-.opacity-25  { opacity: 0.25; }
-.opacity-50  { opacity: 0.5; }
-.opacity-75  { opacity: 0.75; }
-.opacity-100 { opacity: 1; }
+.shadow {
+  box-shadow: var(--shadow-base);
+}
 
-// ── Overflow ──
-.overflow-auto    { overflow: auto; }
-.overflow-hidden  { overflow: hidden; }
-.overflow-scroll  { overflow: scroll; }
-.overflow-visible { overflow: visible; }
-.overflow-x-auto  { overflow-x: auto; }
-.overflow-y-auto  { overflow-y: auto; }
+.shadow-md {
+  box-shadow: var(--shadow-md);
+}
 
-// ── Position ──
-.relative { position: relative; }
-.absolute { position: absolute; }
-.fixed    { position: fixed; }
-.sticky   { position: sticky; }
-.static   { position: static; }
+.shadow-lg {
+  box-shadow: var(--shadow-lg);
+}
 
-.inset-0  { inset: 0; }
-.top-0    { top: 0; }
-.right-0  { right: 0; }
-.bottom-0 { bottom: 0; }
-.left-0   { left: 0; }
+.shadow-xl {
+  box-shadow: var(--shadow-xl);
+}
 
-// ── Z-index ──
-.z-0  { z-index: 0; }
-.z-10 { z-index: 10; }
-.z-20 { z-index: 20; }
-.z-50 { z-index: 50; }
+.shadow-2xl {
+  box-shadow: var(--shadow-2xl);
+}
 
-// ── Cursor ──
-.cursor-pointer     { cursor: pointer; }
-.cursor-default     { cursor: default; }
-.cursor-not-allowed { cursor: not-allowed; }
-.cursor-wait        { cursor: wait; }
+.opacity-0 {
+  opacity: 0;
+}
 
-// ── User select ──
-.select-none { user-select: none; }
-.select-text { user-select: text; }
-.select-all  { user-select: all; }
+.opacity-25 {
+  opacity: 0.25;
+}
 
-// ── Pointer events ──
-.pointer-events-none { pointer-events: none; }
-.pointer-events-auto { pointer-events: auto; }
+.opacity-50 {
+  opacity: 0.5;
+}
 
-// ── Visibility ──
-.visible   { visibility: visible; }
-.invisible { visibility: hidden; }
+.opacity-75 {
+  opacity: 0.75;
+}
 
-// ── Accesibilidad ──
+.opacity-100 {
+  opacity: 1;
+}
+
+.overflow-auto {
+  overflow: auto;
+}
+
+.overflow-hidden {
+  overflow: hidden;
+}
+
+.overflow-scroll {
+  overflow: scroll;
+}
+
+.overflow-visible {
+  overflow: visible;
+}
+
+.overflow-x-auto {
+  overflow-x: auto;
+}
+
+.overflow-y-auto {
+  overflow-y: auto;
+}
+
+.relative {
+  position: relative;
+}
+
+.absolute {
+  position: absolute;
+}
+
+.fixed {
+  position: fixed;
+}
+
+.sticky {
+  position: sticky;
+}
+
+.static {
+  position: static;
+}
+
+.inset-0 {
+  inset: 0;
+}
+
+.top-0 {
+  top: 0;
+}
+
+.right-0 {
+  right: 0;
+}
+
+.bottom-0 {
+  bottom: 0;
+}
+
+.left-0 {
+  left: 0;
+}
+
+.z-0 {
+  z-index: 0;
+}
+
+.z-10 {
+  z-index: 10;
+}
+
+.z-20 {
+  z-index: 20;
+}
+
+.z-50 {
+  z-index: 50;
+}
+
+.cursor-pointer {
+  cursor: pointer;
+}
+
+.cursor-default {
+  cursor: default;
+}
+
+.cursor-not-allowed {
+  cursor: not-allowed;
+}
+
+.cursor-wait {
+  cursor: wait;
+}
+
+.select-none {
+  user-select: none;
+}
+
+.select-text {
+  user-select: text;
+}
+
+.select-all {
+  user-select: all;
+}
+
+.pointer-events-none {
+  pointer-events: none;
+}
+
+.pointer-events-auto {
+  pointer-events: auto;
+}
+
+.visible {
+  visibility: visible;
+}
+
+.invisible {
+  visibility: hidden;
+}
+
 .sr-only {
   position: absolute;
   width: 1px;
@@ -77,12 +182,29 @@
   border-width: 0;
 }
 
-// ── Transiciones comunes ──
-.transition         { transition: all var(--duration-base) var(--ease-in-out); }
-.transition-colors  { transition: color, background-color, border-color var(--duration-base) var(--ease-in-out); }
-.transition-opacity { transition: opacity var(--duration-base) var(--ease-in-out); }
-.transition-none    { transition: none; }
+.transition {
+  transition: all var(--duration-base) var(--ease-in-out);
+}
 
-// ── Aspect ratio ──
-.aspect-square { aspect-ratio: 1 / 1; }
-.aspect-video  { aspect-ratio: 16 / 9; }
+.transition-colors {
+  transition:
+    color,
+    background-color,
+    border-color var(--duration-base) var(--ease-in-out);
+}
+
+.transition-opacity {
+  transition: opacity var(--duration-base) var(--ease-in-out);
+}
+
+.transition-none {
+  transition: none;
+}
+
+.aspect-square {
+  aspect-ratio: 1 / 1;
+}
+
+.aspect-video {
+  aspect-ratio: 16 / 9;
+}

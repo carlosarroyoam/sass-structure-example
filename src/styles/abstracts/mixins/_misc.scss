@@ -1,0 +1,64 @@
+@use 'sass:map';
+@use '../tokens' as t;
+
+@mixin transition($props: all, $speed: base, $timing: in-out) {
+  $duration: map.get(t.$transitions, $speed);
+  $ease: map.get(t.$easing, $timing);
+  transition: $props $duration $ease;
+}
+
+@mixin focus-ring($color: var(--color-primary-500), $offset: 2px) {
+  &:focus-visible {
+    outline: 2px solid $color;
+    outline-offset: $offset;
+    border-radius: var(--radius-sm);
+  }
+}
+
+@mixin absolute-center {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+@mixin overlay($bg: rgb(0 0 0 / 0.5)) {
+  position: fixed;
+  inset: 0;
+  background-color: $bg;
+  z-index: var(--z-overlay);
+}
+
+@mixin sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border-width: 0;
+}
+
+@mixin custom-scrollbar(
+  $width: 6px,
+  $track: var(--color-neutral-100),
+  $thumb: var(--color-neutral-400)
+) {
+  scrollbar-width: thin;
+  scrollbar-color: $thumb $track;
+
+  &::-webkit-scrollbar {
+    width: $width;
+  }
+
+  &::-webkit-scrollbar-track {
+    background: $track;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background-color: $thumb;
+    border-radius: var(--radius-full);
+  }
+}

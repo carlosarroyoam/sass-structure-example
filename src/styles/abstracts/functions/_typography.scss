@@ -1,0 +1,6 @@
+@use 'sass:map';
+@use '../tokens' as t;
+
+@function font-size($key) {
+  @return map.get(t.$font-sizes, $key);
+}

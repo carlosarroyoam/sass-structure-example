@@ -1,42 +1,94 @@
-// ============================================================
-// UTILITY — Spacing (estilo Tailwind)
-// p-4  px-6  my-8  gap-3  etc.
-// ============================================================
+@use 'sass:map';
 @use '../abstracts' as *;
 
 $_keys: (0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 14, 16, 20, 24, 28, 32, 36, 40, 48, 64, 80, 96);
 
 @each $n in $_keys {
-  $key: "#{$n}";
+  $key: '#{$n}';
 
-  @if map-has-key($spacing-scale, $key) {
-    // Padding
-    .p-#{$n}  { padding: var(--space-#{$n}); }
-    .px-#{$n} { padding-inline: var(--space-#{$n}); }
-    .py-#{$n} { padding-block: var(--space-#{$n}); }
-    .pt-#{$n} { padding-top: var(--space-#{$n}); }
-    .pr-#{$n} { padding-right: var(--space-#{$n}); }
-    .pb-#{$n} { padding-bottom: var(--space-#{$n}); }
-    .pl-#{$n} { padding-left: var(--space-#{$n}); }
+  @if map.has-key($spacing-scale, $key) {
+    .p-#{$n} {
+      padding: var(--space-#{$n});
+    }
 
-    // Margin
-    .m-#{$n}  { margin: var(--space-#{$n}); }
-    .mx-#{$n} { margin-inline: var(--space-#{$n}); }
-    .my-#{$n} { margin-block: var(--space-#{$n}); }
-    .mt-#{$n} { margin-top: var(--space-#{$n}); }
-    .mr-#{$n} { margin-right: var(--space-#{$n}); }
-    .mb-#{$n} { margin-bottom: var(--space-#{$n}); }
-    .ml-#{$n} { margin-left: var(--space-#{$n}); }
+    .px-#{$n} {
+      padding-inline: var(--space-#{$n});
+    }
 
-    // Gap
-    .gap-#{$n}   { gap: var(--space-#{$n}); }
-    .gap-x-#{$n} { column-gap: var(--space-#{$n}); }
-    .gap-y-#{$n} { row-gap: var(--space-#{$n}); }
+    .py-#{$n} {
+      padding-block: var(--space-#{$n});
+    }
+
+    .pt-#{$n} {
+      padding-top: var(--space-#{$n});
+    }
+
+    .pr-#{$n} {
+      padding-right: var(--space-#{$n});
+    }
+
+    .pb-#{$n} {
+      padding-bottom: var(--space-#{$n});
+    }
+
+    .pl-#{$n} {
+      padding-left: var(--space-#{$n});
+    }
+
+    .m-#{$n} {
+      margin: var(--space-#{$n});
+    }
+
+    .mx-#{$n} {
+      margin-inline: var(--space-#{$n});
+    }
+
+    .my-#{$n} {
+      margin-block: var(--space-#{$n});
+    }
+
+    .mt-#{$n} {
+      margin-top: var(--space-#{$n});
+    }
+
+    .mr-#{$n} {
+      margin-right: var(--space-#{$n});
+    }
+
+    .mb-#{$n} {
+      margin-bottom: var(--space-#{$n});
+    }
+
+    .ml-#{$n} {
+      margin-left: var(--space-#{$n});
+    }
+
+    .gap-#{$n} {
+      gap: var(--space-#{$n});
+    }
+
+    .gap-x-#{$n} {
+      column-gap: var(--space-#{$n});
+    }
+
+    .gap-y-#{$n} {
+      row-gap: var(--space-#{$n});
+    }
   }
 }
 
-// Margin auto
-.mx-auto { margin-inline: auto; }
-.ml-auto { margin-left: auto; }
-.mr-auto { margin-right: auto; }
-.m-auto  { margin: auto; }
+.mx-auto {
+  margin-inline: auto;
+}
+
+.ml-auto {
+  margin-left: auto;
+}
+
+.mr-auto {
+  margin-right: auto;
+}
+
+.m-auto {
+  margin: auto;
+}
