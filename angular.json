@@ -7,7 +7,7 @@
   },
   "newProjectRoot": "projects",
   "projects": {
-    "sass": {
+    "sass-structure-example": {
       "projectType": "application",
       "schematics": {
         "@schematics/angular:component": {
@@ -63,10 +63,10 @@
           "builder": "@angular/build:dev-server",
           "configurations": {
             "production": {
-              "buildTarget": "sass:build:production"
+              "buildTarget": "sass-structure-example:build:production"
             },
             "development": {
-              "buildTarget": "sass:build:development"
+              "buildTarget": "sass-structure-example:build:development"
             }
           },
           "defaultConfiguration": "development"
