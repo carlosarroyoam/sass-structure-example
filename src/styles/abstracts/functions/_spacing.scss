@@ -1,9 +1,0 @@
-@function spacing($key) {
-  @if map.has-key(t.$spacing-scale, $key) {
-    @return map.get(t.$spacing-scale, $key);
-  }
-
-  @warn "Spacing '#{$key}' does not exists";
-
-  @return null;
-}

@@ -1,6 +1,0 @@
-@use 'sass:map';
-@use '../tokens' as t;
-
-@function breakpoint($key) {
-  @return map.get(t.$breakpoints, $key);
-}

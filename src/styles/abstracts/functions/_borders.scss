@@ -1,6 +1,0 @@
-@use 'sass:map';
-@use '../tokens' as t;
-
-@function radius($key) {
-  @return map.get(t.$radii, $key);
-}
