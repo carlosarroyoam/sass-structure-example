@@ -1,6 +1,7 @@
 @use 'sass:map';
 @use '../abstracts' as *;
 
+/// Generates spacing utility classes from the shared spacing scale.
 $_keys: (0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 14, 16, 20, 24, 28, 32, 36, 40, 48, 64, 80, 96);
 
 @each $n in $_keys {
@@ -77,6 +78,7 @@ $_keys: (0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 14, 16, 20, 24, 28, 32, 36, 4
   }
 }
 
+/// Auto-margin helpers for alignment and centering.
 .mx-auto {
   margin-inline: auto;
 }

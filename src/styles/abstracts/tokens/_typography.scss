@@ -1,3 +1,4 @@
+/// Font family tokens used for primary text styles.
 $font-families: (
   'sans': (
     'Inter',
@@ -17,6 +18,7 @@ $font-families: (
   ),
 );
 
+/// Font size tokens used for the shared type scale.
 $font-sizes: (
   'xs': 0.75rem,
   'sm': 0.875rem,
@@ -30,6 +32,7 @@ $font-sizes: (
   '6xl': 3.75rem,
 );
 
+/// Font weight tokens used for emphasis and hierarchy.
 $font-weights: (
   'thin': 100,
   'light': 300,
@@ -41,6 +44,7 @@ $font-weights: (
   'black': 900,
 );
 
+/// Line-height tokens used to control text density and readability.
 $line-heights: (
   'none': 1,
   'tight': 1.25,

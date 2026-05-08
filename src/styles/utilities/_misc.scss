@@ -1,3 +1,4 @@
+/// Miscellaneous utility classes for elevation, positioning, visibility, and effects.
 .shadow-none {
   box-shadow: none;
 }
@@ -26,6 +27,7 @@
   box-shadow: var(--shadow-2xl);
 }
 
+/// Opacity helpers.
 .opacity-0 {
   opacity: 0;
 }
@@ -46,6 +48,7 @@
   opacity: 1;
 }
 
+/// Overflow helpers.
 .overflow-auto {
   overflow: auto;
 }
@@ -70,6 +73,7 @@
   overflow-y: auto;
 }
 
+/// Positioning helpers.
 .relative {
   position: relative;
 }
@@ -110,6 +114,7 @@
   left: 0;
 }
 
+/// Stacking helpers.
 .z-0 {
   z-index: 0;
 }
@@ -126,6 +131,7 @@
   z-index: 50;
 }
 
+/// Interaction helpers.
 .cursor-pointer {
   cursor: pointer;
 }
@@ -162,6 +168,7 @@
   pointer-events: auto;
 }
 
+/// Visibility helpers.
 .visible {
   visibility: visible;
 }
@@ -170,6 +177,7 @@
   visibility: hidden;
 }
 
+/// Screen-reader-only helper.
 .sr-only {
   position: absolute;
   width: 1px;
@@ -182,6 +190,7 @@
   border-width: 0;
 }
 
+/// Transition helpers.
 .transition {
   transition: all var(--duration-base) var(--ease-in-out);
 }
@@ -201,6 +210,7 @@
   transition: none;
 }
 
+/// Aspect-ratio helpers.
 .aspect-square {
   aspect-ratio: 1 / 1;
 }

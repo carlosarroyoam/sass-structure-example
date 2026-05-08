@@ -1,12 +1,21 @@
 @use 'sass:map';
 @use '../tokens' as t;
 
+/// Applies a transition using named duration and easing tokens.
+///
+/// @param {string|list} $props [all] - CSS properties to animate.
+/// @param {string} $speed [base] - Transition duration token key.
+/// @param {string} $timing [in-out] - Easing token key.
 @mixin transition($props: all, $speed: base, $timing: in-out) {
   $duration: map.get(t.$transitions, $speed);
   $ease: map.get(t.$easing, $timing);
   transition: $props $duration $ease;
 }
 
+/// Adds a visible keyboard focus outline with an offset.
+///
+/// @param {color|string} $color [var(--color-primary-500)] - Focus ring color.
+/// @param {number|string} $offset [2px] - Distance between the element and outline.
 @mixin focus-ring($color: var(--color-primary-500), $offset: 2px) {
   &:focus-visible {
     outline: 2px solid $color;
@@ -15,6 +24,7 @@
   }
 }
 
+/// Absolutely positions an element at the visual center of its container.
 @mixin absolute-center {
   position: absolute;
   top: 50%;
@@ -22,6 +32,9 @@
   transform: translate(-50%, -50%);
 }
 
+/// Creates a full-screen fixed overlay layer.
+///
+/// @param {color|string} $bg [rgb(0 0 0 / 0.5)] - Overlay background color.
 @mixin overlay($bg: rgb(0 0 0 / 0.5)) {
   position: fixed;
   inset: 0;
@@ -29,6 +42,7 @@
   z-index: var(--z-overlay);
 }
 
+/// Visually hides content while keeping it available to assistive technology.
 @mixin sr-only {
   position: absolute;
   width: 1px;
@@ -41,6 +55,11 @@
   border-width: 0;
 }
 
+/// Styles both standard and WebKit scrollbars.
+///
+/// @param {number|string} $width [6px] - Scrollbar thickness.
+/// @param {color|string} $track [var(--color-neutral-100)] - Track color.
+/// @param {color|string} $thumb [var(--color-neutral-400)] - Thumb color.
 @mixin custom-scrollbar(
   $width: 6px,
   $track: var(--color-neutral-100),

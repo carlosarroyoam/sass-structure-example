@@ -1,5 +1,10 @@
-@use 'sass:map';
-
+/// Converts a pixel value to rem units using a 16px root font size.
+///
+/// This keeps spacing and typography scales relative to the user's base
+/// font settings while still letting callers pass familiar pixel values.
+///
+/// @param {number} $px - The pixel value to convert.
+/// @return {number} The equivalent rem value.
 @function rem($px) {
   @return #{calc($px / 16)}rem;
 }

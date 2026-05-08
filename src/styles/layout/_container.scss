@@ -1,5 +1,6 @@
 @use '../abstracts' as *;
 
+/// Defines responsive layout helpers for page-width containers and sections.
 .container {
   width: 100%;
   margin-inline: auto;

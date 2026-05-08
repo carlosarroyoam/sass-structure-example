@@ -1,3 +1,5 @@
+/// Re-exports all base modules for centralized access.
+/// Re-exports the base style layers that initialize the global UI foundation.
 @forward 'variables';
 @forward 'reset';
 @forward 'typography';

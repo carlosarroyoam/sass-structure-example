@@ -1,5 +1,6 @@
 @use '../abstracts' as *;
 
+/// Display, flexbox, and grid utility classes for layout composition.
 .block {
   display: block;
 }
@@ -28,6 +29,7 @@
   display: none;
 }
 
+/// Flex direction and sizing helpers.
 .flex-row {
   flex-direction: row;
 }
@@ -64,6 +66,7 @@
   flex-shrink: 0;
 }
 
+/// Alignment and distribution helpers for flex layouts.
 .justify-start {
   justify-content: flex-start;
 }
@@ -124,6 +127,7 @@
   align-self: stretch;
 }
 
+/// Grid column and span helpers.
 @for $i from 1 through 12 {
   .grid-cols-#{$i} {
     grid-template-columns: repeat(#{$i}, minmax(0, 1fr));
@@ -138,6 +142,7 @@
   grid-column: 1 / -1;
 }
 
+/// Responsive display helpers keyed by breakpoint tokens.
 @each $bp-name, $bp-value in $breakpoints {
   @media (min-width: $bp-value) {
     .#{$bp-name}\:flex {

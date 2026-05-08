@@ -1,6 +1,7 @@
 @use 'sass:map';
 @use '../abstracts' as *;
 
+/// Publishes design tokens as CSS custom properties and semantic aliases.
 :root {
   @each $key, $value in $color-primitives {
     --color-#{$key}: #{$value};

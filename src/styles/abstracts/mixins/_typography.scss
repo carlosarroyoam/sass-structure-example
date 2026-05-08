@@ -2,6 +2,11 @@
 @use '../tokens' as t;
 @use '../functions' as fn;
 
+/// Applies font-size and optional weight and line-height tokens.
+///
+/// @param {string} $size - Font-size token key resolved through `fn.font-size`.
+/// @param {string|null} $weight [null] - Optional font-weight token key.
+/// @param {string|null} $line-height [null] - Optional line-height token key.
 @mixin text($size, $weight: null, $line-height: null) {
   font-size: fn.font-size($size);
 
@@ -14,6 +19,9 @@
   }
 }
 
+/// Truncates text to a single line or a fixed number of lines.
+///
+/// @param {number} $lines [1] - Number of visible lines before truncation.
 @mixin truncate($lines: 1) {
   @if $lines == 1 {
     overflow: hidden;

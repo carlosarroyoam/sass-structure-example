@@ -1,6 +1,9 @@
 @use 'sass:map';
 @use '../tokens' as t;
 
+/// Wraps content in a min-width media query for a named breakpoint token.
+///
+/// @param {string} $breakpoint - Breakpoint token key from `t.$breakpoints`.
 @mixin respond-to($breakpoint) {
   @if map.has-key(t.$breakpoints, $breakpoint) {
     @media (min-width: map.get(t.$breakpoints, $breakpoint)) {
@@ -11,6 +14,9 @@
   }
 }
 
+/// Wraps content in a max-width media query just below a named breakpoint token.
+///
+/// @param {string} $breakpoint - Breakpoint token key from `t.$breakpoints`.
 @mixin respond-below($breakpoint) {
   @if map.has-key(t.$breakpoints, $breakpoint) {
     @media (max-width: calc(#{map.get(t.$breakpoints, $breakpoint)} - 1px)) {
