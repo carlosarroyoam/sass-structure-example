@@ -1,23 +1,4 @@
 @use 'sass:map';
-@use '../tokens' as t;
-@use '../functions' as fn;
-
-/// Applies font-size and optional weight and line-height tokens.
-///
-/// @param {string} $size - Font-size token key resolved through `fn.font-size`.
-/// @param {string|null} $weight [null] - Optional font-weight token key.
-/// @param {string|null} $line-height [null] - Optional line-height token key.
-@mixin text($size, $weight: null, $line-height: null) {
-  font-size: fn.font-size($size);
-
-  @if $weight {
-    font-weight: map.get(t.$font-weights, $weight);
-  }
-
-  @if $line-height {
-    line-height: map.get(t.$line-heights, $line-height);
-  }
-}
 
 /// Truncates text to a single line or a fixed number of lines.
 ///
